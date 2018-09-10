@@ -1,0 +1,112 @@
+﻿@charset "utf-8";
+
+@font-face {
+    font-family: champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+    font-family: dobkinplain;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('truetype');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Brenden Riley
+   Date:   9.10.18
+   
+   Filename: lake_styles.css
+
+*/
+
+/* Structure Styles */
+html {
+    background-color: rgb(30, 30, 44);
+}
+
+body {
+    background-color: ivory;
+}
+
+section#rightcol {
+    background-color: rgb(27, 55, 78);
+    text-align: left;
+}
+
+section#rightcol li {
+    list-style: none;
+    color: white;
+}
+
+section#rightcol li>a {
+    line-height: 1.5em;
+    padding: 5px 2px 5px 2px;
+}
+
+section#rightcol a:link,
+section#rightcol a:visited {
+    text-decoration: none;
+    color: rgba(242, 252, 218, 0.8);
+}
+
+section#rightcol a:active,
+section#rightcol a:hover {
+    text-decoration: none;
+    background-color: rgba(88, 92, 80, 0.6);
+}
+
+section#rightcol h2 {
+    color: rgba(255, 255, 255, 0.75);
+    padding-left: 10px;
+}
+
+nav#top a:visited,
+nav#top a:link {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(100, 100, 100, .95);
+}
+
+nav#top a:active,
+nav#top a:hover {
+    background-color: rgba(80, 80, 80, .97);
+}
+
+blockquote::before {
+    content: open-quote;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+blockquote {
+    color: white;
+    font-weight: bold;
+    quotes: "\201C""\201D";
+}
+
+blockquote::after {
+    content: close-quote;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(225, 230, 159)
+}
+
+section>h1 {
+    font-family: dobkinplain, cursive;
+    font-size: 50px;
+    padding-left: 10px;
+}
+
+section>p {
+    font-size: 1.1em;
+    padding-left: 10px;
+}
