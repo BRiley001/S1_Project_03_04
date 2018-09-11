@@ -1,5 +1,6 @@
 ﻿@charset "utf-8";
 
+/* font-face determines what extra fonts can be used in the css, and subsequently the website, in this case, champagne and dobkinplain */
 @font-face {
     font-family: champagne;
     src: url('cac_champagne.woff') format('woff'),
@@ -23,6 +24,7 @@
 */
 
 /* Structure Styles */
+/* the whole page will be a really dark blue/purple, the main area of the page ivory, the footer at the bottom will be yellowish, and in the center, and the initial "Welcome" at the top of the page will look fancy, and have less space from the tops and bottoms */
 html {
     background-color: rgb(30, 30, 44);
 }
@@ -31,14 +33,38 @@ body {
     background-color: ivory;
 }
 
+footer {
+    text-align: center;
+    background-color: rgb(225, 230, 159)
+}
+
+section>h1 {
+    font-family: dobkinplain, cursive;
+    font-size: 50px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Section (Right Column) Styles */
+/* The background is dark blue, alinged left, goes to the bottom of the other boxes, has alternating squares and circles list characters, with hyperlinks spread out more, that gain a background, while the headings look fancier */
 section#rightcol {
     background-color: rgb(27, 55, 78);
     text-align: left;
+    padding-bottom: 245px;
 }
 
 section#rightcol li {
-    list-style: none;
+    list-style: circle;
     color: white;
+}
+
+section#rightcol li:nth-of-type(even) {
+    list-style: circle;
+}
+
+section#rightcol li:nth-of-type(odd) {
+    list-style: square;
 }
 
 section#rightcol li>a {
@@ -61,8 +87,12 @@ section#rightcol a:hover {
 section#rightcol h2 {
     color: rgba(255, 255, 255, 0.75);
     padding-left: 10px;
+    font-family: cursive;
+    font-style: italic;
 }
 
+/* Navigation Bar (Top) Styles */
+/* the navigation bar at the top will change backgrounds when hovered or clicked on */
 nav#top a:visited,
 nav#top a:link {
     text-decoration: none;
@@ -75,6 +105,8 @@ nav#top a:hover {
     background-color: rgba(80, 80, 80, .97);
 }
 
+/* Blockquote Styles */
+/* the blockquote in the right column will have fancy-ish quotes, while the text is bold, an slightly larger */
 blockquote::before {
     content: open-quote;
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
@@ -95,18 +127,63 @@ blockquote::after {
     font-weight: bold;
 }
 
-footer {
-    text-align: center;
-    background-color: rgb(225, 230, 159)
-}
-
-section>h1 {
-    font-family: dobkinplain, cursive;
-    font-size: 50px;
-    padding-left: 10px;
-}
-
-section>p {
+/* Section (Main Paragraph) Styles */
+/* the main paragraph will have larger text, be offset from the left, have a light gray background, with increased spacing between lines and words */
+section#leftcol>ul {
     font-size: 1.1em;
     padding-left: 10px;
+    background-color: lightgray;
+    line-height: 1.4em;
+    word-spacing: .09em;
+}
+
+/* Aside (Left Box) Styles */
+/* the left box will have a pink background, be spaced more between lines, and have hyperlinks that are magenta, that change their background when hovered over, the text is spaced out more than usual */
+aside#notes {
+    background-color: rgba(230, 111, 111, 0.7);
+    line-height: 2em;
+}
+
+aside#notes li {
+    list-style: circle;
+}
+
+aside#notes a:visited,
+aside#notes a:link {
+    text-decoration: none;
+    color: rgba(197, 23, 231, 0.95);
+}
+
+aside#notes a:active,
+aside#notes a:hover {
+    background-color: rgba(235, 135, 135, 0.97)
+}
+
+aside#notes h1 {
+    margin-left: 0px;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+/* Aside (Right Box) Styles */
+/* the right box has more spacing, has a yellow-ish background, with center aligned text, that have underlined headings, with less important headings just being larger, while the text has a slightly different font */
+aside#events {
+    line-height: 1.5em;
+    background-color: rgb(221, 221, 107);
+    text-align: center;
+}
+
+aside#events h1 {
+    font-size: 1.3em;
+    text-decoration: underline;
+    font-family: champagne;
+}
+
+aside#events h2 {
+    font-size: 1.2em;
+}
+
+aside#events p {
+    font-family: champagne, serif;
 }
